@@ -21,12 +21,15 @@ Runtime requirements:
 Build requirements:
 (besides corresponding -devel packages)
   cygwin-1.5.24-2
+  autoconf2.5-2.61-1
+  automake1.10-1.10-1
   binutils-20060817-1
   cygport-0.3.6-1
   gawk-3.1.5-4
   gcc-core-3.4.4-3
   make-3.81-1
   pkg-config-0.21-1
+  re2c-0.12.3-1
   sed-4.1.5-2
 
 Canonical website:
