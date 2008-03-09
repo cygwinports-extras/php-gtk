@@ -6,26 +6,25 @@ GTK+ classes and functions and greatly simplifies writing client-side
 cross-platform GUI applications.
 
 Runtime requirements:
-  cygwin-1.5.24-2
-  atk-1.18.0-1
-  gdk-pixbuf2-2.10.14-1
-  glib2-2.12.13-1
-  gtk2-x11-2.10.14-1
+  cygwin-1.5.25-7
+  atk-1.20.0-1
+  gdk-pixbuf2-2.12.7-1
+  glib2-2.14.6-1
+  gtk2-x11-2.12.7-1
   gtkhtml38-3.12.3-1
   gtksourceview-1.8.5-1
-  libglade2-2.6.1-1
+  libglade2-2.6.2-1
   libsexy-0.1.11-1
-  pango-1.16.5-1
-  php-5.2.4-1
+  pango-1.18.4-1
+  php-5.2.5-1
 
 Build requirements:
 (besides corresponding -devel packages)
-  cygwin-1.5.24-2
   autoconf2.5-2.61-1
   automake1.10-1.10-1
   binutils-20060817-1
-  cygport-0.3.6-1
-  gawk-3.1.5-4
+  cygport-0.3.8-1
+  gawk-3.1.6-1
   gcc-core-3.4.4-3
   make-3.81-1
   pkg-config-0.21-1
@@ -41,15 +40,15 @@ Canonical download:
 -------------------------------------------
 
 Build instructions:
-  unpack php-gtk-2.0.0beta-X-src.tar.bz2
+  unpack php-gtk-2.0.0-X-src.tar.bz2
     if you use setup to install this src package, it will be
 	 unpacked under /usr/src automatically
   cd /usr/src
-  cygport ./php-gtk-2.0.0beta-X.cygport all
+  cygport ./php-gtk-2.0.0-X.cygport all
 
 This will create:
-  /usr/src/php-gtk-2.0.0beta-X-src.tar.bz2
-  /usr/src/php-gtk-2.0.0beta-X.tar.bz2
+  /usr/src/php-gtk-2.0.0-X-src.tar.bz2
+  /usr/src/php-gtk-2.0.0-X.tar.bz2
 
 -------------------------------------------
 
@@ -57,17 +56,19 @@ Files included in the binary package:
 
   /etc/php5/conf.d/php-gtk.ini
   /usr/lib/php/20060613/php_gtk2.dll
-  /usr/share/doc/Cygwin/php-gtk-2.0.0beta.README
-  /usr/share/doc/php-gtk-2.0.0beta/AUTHORS
-  /usr/share/doc/php-gtk-2.0.0beta/COPYING.LIB
-  /usr/share/doc/php-gtk-2.0.0beta/ChangeLog
-  /usr/share/doc/php-gtk-2.0.0beta/INSTALL
-  /usr/share/doc/php-gtk-2.0.0beta/NEWS
-  /usr/share/doc/php-gtk-2.0.0beta/README
+  /usr/share/doc/php-gtk-2.0.0/AUTHORS
+  /usr/share/doc/php-gtk-2.0.0/COPYING.LIB
+  /usr/share/doc/php-gtk-2.0.0/ChangeLog
+  /usr/share/doc/php-gtk-2.0.0/INSTALL
+  /usr/share/doc/php-gtk-2.0.0/NEWS
+  /usr/share/doc/php-gtk-2.0.0/README
 
 ------------------
 
 Port Notes:
+
+----- version 2.0.0-1 -----
+Version bump.
 
 ----- version 2.0.0beta-1 -----
 Initial release for Cygwin.
