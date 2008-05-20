@@ -1,0 +1,34 @@
+inherit php
+
+DESCRIPTION="PHP GTK+ bindings"
+HOMEPAGE="http://gtk.php.net/"
+SRC_URI="http://gtk.php.net/distributions/${P}.tar.gz"
+SRC_DIR="${P}"
+
+# scintilla requires g++
+CYGCONF_ARGS="
+  --disable-glibtest
+  --disable-gtktest
+  --disable-scintilla
+
+  --without-extra
+  --with-html
+  --with-libglade
+  --with-libsexy
+  --without-mozembed
+  --with-sourceview
+"
+
+src_compile() {
+	lndirs
+	cd ${B}
+	./buildconf --force || error "buildconf failed"
+	CYGCONF_SOURCE=${B}
+	php_compile
+}
+
+src_install() {
+	cd ${B}
+	cyginstall INSTALL_ROOT=${D}
+	php_postinst
+}
