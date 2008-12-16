@@ -3,6 +3,9 @@ inherit php
 DESCRIPTION="PHP GTK+ bindings"
 HOMEPAGE="http://gtk.php.net/"
 SRC_URI="http://gtk.php.net/distributions/${P}.tar.gz"
+# http://bugs.php.net/bug.php?id=45844
+PATCH_URI="http://rpms.famillecollet.com/files/php-gtk-html318.patch"
+
 SRC_DIR="${P}"
 
 # scintilla requires g++
@@ -11,7 +14,7 @@ CYGCONF_ARGS="
   --disable-gtktest
   --disable-scintilla
 
-  --without-extra
+  --with-extra
   --with-html
   --with-libglade
   --with-libsexy
