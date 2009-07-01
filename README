@@ -6,30 +6,32 @@ GTK+ classes and functions and greatly simplifies writing client-side
 cross-platform GUI applications.
 
 Runtime requirements:
-  cygwin-1.5.25-15
-  libatk1.0_0-1.24.0-1
-  libgdk_pixbuf2.0_0-2.14.5-1
-  libglade2.0_0-2.6.3-2
-  libglib2.0_0-2.18.3-1
-  libgtk2.0_0-2.14.5-1
-  libgtkextra2.0_1-2.1.1-2
-  libgtkhtml3.14_19-3.24.2-1
-  libgtksourceview1.0_0-1.8.5-2
-  libpango1.0_0-1.22.3-1
-  libsexy2-0.1.11-2
-  php-5.2.6-1
+  cygwin-1.7.0-50
+  libatk1.0_0-1.26.0-1
+  libgcc1-4.3.2-2
+  libgdk_pixbuf2.0_0-2.16.2-1
+  libglade2.0_0-2.6.4-1
+  libglib2.0_0-2.20.3-1
+  libgtk2.0_0-2.16.2-1
+  libgtkextra2.0_1-2.1.1-10
+  libgtkhtml3.14_19-3.26.2-1
+  libgtksourceview1.0_0-1.8.5-10
+  libpango1.0_0-1.24.2-1
+  libstdc++6-4.3.2-2
+  php-5.2.10-1
 
 Build requirements:
 (besides corresponding -devel packages)
-  autoconf2.5-2.63-1
-  automake1.10-1.10.1-2
+  autoconf2.5-2.63-10
+  automake1.10-1.10.2-10
   binutils-20086024-2
-  cygport-0.4.3-1
-  gawk-3.1.6-1
-  gcc-core-3.4.4-3
-  make-3.81-1
-  pkg-config-0.23a-2
-  re2c-0.13.5-1
+  cygport-0.9.7-1
+  gawk-3.1.6-2
+  gcc4-core-4.3.2-2
+  gcc4-g++-4.3.2-2
+  make-3.81-2
+  pkg-config-0.23b-10
+  re2c-0.13.5-10
   sed-4.1.5-2
 
 Canonical website:
@@ -57,28 +59,18 @@ Files included in the binary package:
 
   /etc/php5/conf.d/php_gtk2.ini
   /usr/lib/php/20060613/php_gtk2.dll
-  /usr/share/doc/php-gtk-2.0.1/AUTHORS
-  /usr/share/doc/php-gtk-2.0.1/COPYING.LIB
-  /usr/share/doc/php-gtk-2.0.1/ChangeLog
-  /usr/share/doc/php-gtk-2.0.1/INSTALL
-  /usr/share/doc/php-gtk-2.0.1/NEWS
-  /usr/share/doc/php-gtk-2.0.1/README
+  /usr/share/doc/php-gtk/AUTHORS
+  /usr/share/doc/php-gtk/COPYING.LIB
+  /usr/share/doc/php-gtk/ChangeLog
+  /usr/share/doc/php-gtk/NEWS
+  /usr/share/doc/php-gtk/README
 
 ------------------
 
 Port Notes:
 
------ version 2.0.1-2 -----
-Changed GtkHtml dep to 3.14 and added GtkExtra bindings.
-
------ version 2.0.1-1 -----
-Version bump.
-
------ version 2.0.0-1 -----
-Version bump.
-
------ version 2.0.0beta-1 -----
-Initial release for Cygwin.
+----- version 2.0.1-10 -----
+Initial release for Cygwin 1.7.
 
 
 Cygwin port maintained by:

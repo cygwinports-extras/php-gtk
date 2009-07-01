@@ -1,5 +1,5 @@
-category: Gnome PHP
-requires: cygwin libatk1.0_0 libgdk_pixbuf2.0_0 libglade2.0_0 libglib2.0_0 libgtk2.0_0 libgtkextra2.0_1 libgtkhtml3.14_19 libgtksourceview1.0_0 libpango1.0_0 libsexy2 php
+category: Gnome
+requires: libatk1.0_0 libgdk_pixbuf2.0_0 libglade2.0_0 libglib2.0_0 libgtk2.0_0 libgtkextra2.0_1 libgtkhtml3.14_19 libgtksourceview1.0_0 libpango1.0_0 libstdc++6 php
 sdesc: "PHP GTK+ bindings"
 ldesc: "PHP-GTK is an extension for the PHP programming language that 
 implements language bindings for GTK+. It provides an object-oriented 

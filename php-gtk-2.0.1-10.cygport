@@ -8,16 +8,15 @@ PATCH_URI="http://rpms.famillecollet.com/files/php-gtk-html318.patch"
 
 SRC_DIR="${P}"
 
-# scintilla requires g++
 CYGCONF_ARGS="
   --disable-glibtest
   --disable-gtktest
-  --disable-scintilla
+  --enable-scintilla
 
   --with-extra
   --with-html
   --with-libglade
-  --with-libsexy
+  --without-libsexy
   --without-mozembed
   --with-sourceview
 "
