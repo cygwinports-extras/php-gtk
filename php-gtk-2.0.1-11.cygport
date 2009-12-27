@@ -18,7 +18,7 @@ CYGCONF_ARGS="
   --with-libglade
   --without-libsexy
   --without-mozembed
-  --with-sourceview
+  --without-sourceview
 "
 
 src_compile() {
