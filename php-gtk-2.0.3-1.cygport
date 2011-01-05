@@ -1,17 +1,23 @@
-inherit php
+SVN_URI="http://svn.php.net/repository/gtk/${PN}"
+inherit php svn
 
 DESCRIPTION="PHP GTK+ bindings"
 HOMEPAGE="http://gtk.php.net/"
-SRC_URI="http://gtk.php.net/distributions/${P}.tar.gz"
-# http://bugs.php.net/bug.php?id=45844
-PATCH_URI="http://rpms.famillecollet.com/files/php-gtk-html318.patch"
+#SRC_URI="http://gtk.php.net/distributions/${P}.tar.gz"
+#SRC_DIR="${P}"
 
-SRC_DIR="${P}"
+PATCH_URI="
+	2.0.3-gtkhtml314.patch
+	2.0.3-libtool24-cxx.patch
+"
+
+DIFF_EXCLUDES="tests"
+DEPS_PATH=${PHP_EXTENSION_DIR}
 
 CYGCONF_ARGS="
   --disable-glibtest
   --disable-gtktest
-  --enable-scintilla
+  --disable-scintilla
 
   --with-extra
   --with-html
@@ -21,16 +27,19 @@ CYGCONF_ARGS="
   --without-sourceview
 "
 
+MAKEOPTS+=" -j1"
+
 src_compile() {
 	lndirs
 	cd ${B}
 	./buildconf --force || error "buildconf failed"
 	CYGCONF_SOURCE=${B}
-	php_compile
+	php_compile EXTRA_LDFLAGS=-lphp_cairo
 }
 
 src_install() {
 	cd ${B}
 	cyginstall INSTALL_ROOT=${D}
+	newlib .libs/php_gtk2.dll.a libphp_gtk2.dll.a
 	php_postinst
 }
