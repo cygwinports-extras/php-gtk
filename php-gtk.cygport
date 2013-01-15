@@ -1,10 +1,16 @@
-SVN_URI="http://svn.php.net/repository/gtk/${PN}"
-inherit php svn
+GIT_URI="git://git.php.net/php/gtk-src.git"
+inherit php git
 
-DESCRIPTION="PHP GTK+ bindings"
+NAME="php-gtk"
+VERSION=2.0.3
+RELEASE=2
+CATEGORY="PHP"
+SUMMARY="PHP GTK+ bindings"
+DESCRIPTION="PHP-GTK is an extension for the PHP programming language that
+implements language bindings for GTK+. It provides an object-oriented interface
+to GTK+ classes and functions and greatly simplifies writing client-side
+cross-platform GUI applications."
 HOMEPAGE="http://gtk.php.net/"
-#SRC_URI="http://gtk.php.net/distributions/${P}.tar.gz"
-#SRC_DIR="${P}"
 
 PATCH_URI="
 	2.0.3-gtkhtml314.patch
@@ -19,8 +25,8 @@ CYGCONF_ARGS="
   --disable-gtktest
   --disable-scintilla
 
-  --with-extra
-  --with-html
+  --without-extra
+  --without-html
   --with-libglade
   --without-libsexy
   --without-mozembed

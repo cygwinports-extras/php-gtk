@@ -1,7 +1,0 @@
-category: Gnome PHP
-requires: libatk1.0_0 libgdk_pixbuf2.0_0 libglade2.0_0 libglib2.0_0 libgtk2.0_0 libgtkextra2.0_1 libgtkhtml3.14_19 libpango1.0_0 php php-cairo
-sdesc: "PHP GTK+ bindings"
-ldesc: "PHP-GTK is an extension for the PHP programming language that 
-implements language bindings for GTK+. It provides an object-oriented 
-interface to GTK+ classes and functions and greatly simplifies writing 
-client-side cross-platform GUI applications."
